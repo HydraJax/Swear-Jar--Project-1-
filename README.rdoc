@@ -1,0 +1,7 @@
+== README
+This application works just like the swear jar at home, but for websites you visit too often.  You simply list the websites that you "promise yourself" you are going to stay away from, select a non profit to donate to, and then select an amount you want to donate.  "Swear Jar" will automatically remember the websites you visited and donate the amount you elected to the non profit of your choice. 
+
+
+
+
+The owner of this software reserves all rights to to this project.  Swear jar code and idea(s) are the sole intellectual property of Jozef Woroniecki. No part of this may be duplicated, shared,re-engineered without the owners written consent. 

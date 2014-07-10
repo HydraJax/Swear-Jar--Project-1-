@@ -1,0 +1,22 @@
+<div class="search_result_wrapper">
+  <div class="donation_list">
+    <!-- search is the route the form goes to /url search -->
+      <%= form_tag("/nonprofit", method: "post") do %>
+
+      <%= radio_button_tag("donation[amount]", "1") %>
+      <p><%= label_tag("amnt_donate", "Donate $1") %></p>
+      <%= radio_button_tag("donation[amount]", "5") %>
+      <p><%= label_tag("amnt_donate", "Donate $5") %></p>
+      <%= radio_button_tag("donation[amount]", "10") %>
+      <p><%= label_tag("amnt_donate", "Donate $10") %></p>
+  </div>
+
+  <div class="search_result_bar">
+   <span class="donation_instruction">  Here are your search results. Click a dollar amount on the right then, scroll through the list and select one Non-profit entity, then click the "Donate" button.</span><br></br>
+      <%= select "donation", "name", @nonprofit_result['filings'].map {|item| [item["organization"]["name"], item["organization"]["name"]] } %>
+  
+      <%= submit_tag "Donate" %>
+
+    <% end %>
+  </div>
+</div>

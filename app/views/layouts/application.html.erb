@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SwearJar</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  
+  <%= csrf_meta_tags %>
+
+  <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
+
+   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<!-- I installed bootstrap but since I did not use any of the functionality of that resource I strayed clear of using any additional rows and columns layouts that are suggested in bootstrap.This was done to keep the code looking clean and free of cruft. -->
+
+</head>
+<body>
+<div class="form-container">
+  <div class="form-text">
+   
+  </div>
+  <div id="user_nav">
+     <% if current_user %>
+       Logged in as <%= current_user.email %>.
+         <div class="log-out"><%= link_to " Log Out ", log_out_path %></div>
+      <% else %>
+         <div class="sign-out"><%= link_to " LOG IN ", log_in_path %></div>
+   
+    <% end %>
+  </div>
+</div>
+
+<div class="top-banner"><h1 class="app_title">SWEAR  JAR</h1></div>
+
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+
+
+<%= yield %>
+<div class="bottom-banner">
+  <div class="icons">
+        <i class="fa fa-twitter-square fa-3x"></i>
+        <i class="fa fa-google-plus-square fa-3x"></i>
+        <i class="fa fa-github fa-spin fa-3x"></i> 
+        <i class="fa fa-linkedin-square fa-3x"></i>
+        <i class="fa fa-facebook-square fa-3x"></i>
+      </div>
+</div>
+
+
+</body>
+</html>

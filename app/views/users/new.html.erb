@@ -1,0 +1,43 @@
+<!-- I still need to look up mor on forms, but it helps to make a form then look in the dev tool console to see what the html is then try to find its HTML counterparts on line and figure it out. -->
+
+<!-- @user makes the fields for this model -->
+  
+    <%= form_for @user do |f| %>
+      <% if @user.errors.any? %>
+       <div class="error_messages">
+         <h2 class=invalid_form>Form is invalid</h2>
+          <ul>
+            <% for message in @user.errors.full_messages %>
+             <li><%= message %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+
+<div class="intro_banner">
+
+  <div class="welcome_text">Welcome to Swear Jar... it works just like the swear jar at home, but for websites you visit too often.  You simply list the websites that you "promise yourself" you are going to stay away from, select a non profit to donate to, and then select an amount you want to donate.  "Swear Jar" will automatically remember the websites you visited and donate that amount to the non profit of your choice.
+  </div>
+<!-- this form is doing a get and not a post? -->
+  <div class="sign_up_form">
+      <p>
+        <%= f.label :name %><br />
+        <%= f.text_field :name %>
+      </p>
+      <p>
+        <%= f.label :email %><br />
+        <%= f.text_field :email %>
+      </p>
+      <p>
+        <%= f.label :password %><br />
+        <%= f.password_field :password %>
+      </p>
+      <p>
+       <%= f.label :password_confirmation, "Password Confirmation" %><br />
+       <%= f.password_field :password_confirmation %>
+      </p>
+      <p class="button"><%= f.submit class: "button" %></p>
+    <% end %>
+   </div>
+</div>
+

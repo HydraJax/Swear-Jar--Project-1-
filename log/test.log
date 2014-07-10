@@ -1,0 +1,8 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (92.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Sat, 03 May 2014 21:23:04 UTC +00:00], ["email", "joe@gmail.com"], ["name", "joe"], ["password", "ahoy"], ["updated_at", Sat, 03 May 2014 21:23:04 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
