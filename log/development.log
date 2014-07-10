@@ -33745,3 +33745,5 @@ Started GET "/nonprofits.json" for 127.0.0.1 at 2014-05-20 14:15:12 -0700
 Processing by NonprofitsController#index as JSON
   [1m[35mNonprofit Load (130.0ms)[0m  SELECT "nonprofits".* FROM "nonprofits"
 Completed 200 OK in 214ms (Views: 78.1ms | ActiveRecord: 134.2ms)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from call at /Users/jozefw/.rvm/gems/ruby-2.0.0-p353@global/gems/rack-1.5.2/lib/rack/lock.rb:17)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from call at /Users/jozefw/.rvm/gems/ruby-2.0.0-p353@global/gems/rack-1.5.2/lib/rack/lock.rb:17)
